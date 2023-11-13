@@ -12,7 +12,7 @@ public class Aluno {
     @GeneratedValue
     public String id;
     @PartitionKey
-    public String nome;
+    public String cpf;
 
     public String getId() {
         return id;
@@ -20,11 +20,11 @@ public class Aluno {
     public void setId(String id) {
         this.id = id;
     }
-    public String getNome() {
-        return nome;
+    public String getCpf() {
+        return cpf;
     }
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
 }
