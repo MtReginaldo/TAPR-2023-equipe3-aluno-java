@@ -1,8 +1,6 @@
 # TAPR-2023-equipe3-aluno-java
 
-Autenticação no AZURE
-
-[DOC](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt)
+[DOC Autenticação no AZURE](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt)
 
 ```
 az login -u ''
