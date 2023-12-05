@@ -1,10 +1,10 @@
-package br.edu.univille.microservaluno;
+package br.edu.univille.microservmatricula;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MicroservalunoApplicationTests {
+class MicroservmatriculaApplicationTests {
 
 	@Test
 	void contextLoads() {

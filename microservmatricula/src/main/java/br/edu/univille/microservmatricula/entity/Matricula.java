@@ -1,4 +1,4 @@
-package br.edu.univille.microservaluno.entity;
+package br.edu.univille.microservmatricula.entity;
 
 import org.springframework.data.annotation.Id;
 
@@ -6,12 +6,12 @@ import com.azure.spring.data.cosmos.core.mapping.Container;
 import com.azure.spring.data.cosmos.core.mapping.GeneratedValue;
 import com.azure.spring.data.cosmos.core.mapping.PartitionKey;
 
-@Container(containerName = "aluno")
-public class Aluno {
+@Container(containerName = "matricula")
+public class matricula {
     @Id
+    @PartitionKey
     @GeneratedValue
     public String id;
-    @PartitionKey
     public String cpf;
 
     public String getId() {

@@ -1,13 +1,13 @@
-package br.edu.univille.microservaluno;
+package br.edu.univille.microservmatricula;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MicroservalunoApplication {
+public class MicroservmatriculaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MicroservalunoApplication.class, args);
+		SpringApplication.run(MicroservmatriculaApplication.class, args);
 	}
 
 }
