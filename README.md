@@ -1,4 +1,4 @@
-# TAPR-2023-equipe3-matricula-java
+# TAPR-2023-equipe3-Matricula-java
 
 - [DOC Autenticação no AZURE](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt)
 - [DOC CosmosDB](https://learn.microsoft.com/en-us/azure/cosmos-db/introduction)

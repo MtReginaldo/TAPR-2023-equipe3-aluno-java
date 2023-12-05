@@ -3,10 +3,10 @@ package br.edu.univille.microservmatricula.repository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import br.edu.univille.microservmatricula.entity.matricula;
+import br.edu.univille.microservmatricula.entity.Matricula;
 
 @Repository
-public interface matriculaRepository 
-    extends CrudRepository<matricula,String>{
+public interface MatriculaRepository 
+    extends CrudRepository<Matricula,String>{
     
 }

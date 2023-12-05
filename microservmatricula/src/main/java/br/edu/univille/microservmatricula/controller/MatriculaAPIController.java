@@ -15,67 +15,67 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import br.edu.univille.microservmatricula.entity.matricula;
-import br.edu.univille.microservmatricula.service.matriculaService;
+import br.edu.univille.microservmatricula.entity.Matricula;
+import br.edu.univille.microservmatricula.service.MatriculaService;
 
 @RestController
-@RequestMapping("/api/v1/matriculas")
-public class matriculaAPIController {
+@RequestMapping("/api/v1/Matriculas")
+public class MatriculaAPIController {
 
     @Autowired
-    private matriculaService service;
+    private MatriculaService service;
 
     @GetMapping
-    public ResponseEntity<List<matricula>> listamatriculas(){
-        var listamatriculas = service.getAll();
+    public ResponseEntity<List<Matricula>> listaMatriculas(){
+        var listaMatriculas = service.getAll();
         return 
-            new ResponseEntity<List<matricula>>
-            (listamatriculas, HttpStatus.OK);
+            new ResponseEntity<List<Matricula>>
+            (listaMatriculas, HttpStatus.OK);
     }
     @GetMapping("/{id}")
-    public ResponseEntity<matricula> buscarmatricula(@PathVariable("id")  String id){
-        var matricula = service.getById(id);
-        if(matricula == null){
+    public ResponseEntity<Matricula> buscarMatricula(@PathVariable("id")  String id){
+        var Matricula = service.getById(id);
+        if(Matricula == null){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return 
-            new ResponseEntity<matricula>
-            (matricula, HttpStatus.OK);
+            new ResponseEntity<Matricula>
+            (Matricula, HttpStatus.OK);
     }
     @PostMapping
-    public ResponseEntity<matricula> inserirmatricula(@RequestBody matricula matricula){
-        if(matricula == null){
+    public ResponseEntity<Matricula> inserirMatricula(@RequestBody Matricula Matricula){
+        if(Matricula == null){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        matricula = service.saveNew(matricula);
+        Matricula = service.saveNew(Matricula);
         return 
-            new ResponseEntity<matricula>
-            (matricula, HttpStatus.OK);
+            new ResponseEntity<Matricula>
+            (Matricula, HttpStatus.OK);
     }
     @PutMapping("/{id}")
-    public ResponseEntity<matricula> atualizarmatricula(@PathVariable("id")  String id, @RequestBody matricula matricula){
-        if(matricula == null || id == ""  || id == null){
+    public ResponseEntity<Matricula> atualizarMatricula(@PathVariable("id")  String id, @RequestBody Matricula Matricula){
+        if(Matricula == null || id == ""  || id == null){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        matricula = service.update(id, matricula);
-        if(matricula == null){
+        Matricula = service.update(id, Matricula);
+        if(Matricula == null){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return 
-            new ResponseEntity<matricula>
-            (matricula, HttpStatus.OK);
+            new ResponseEntity<Matricula>
+            (Matricula, HttpStatus.OK);
     }
     @DeleteMapping("/{id}")
-    public ResponseEntity<matricula> removermatricula(@PathVariable("id")  String id){
+    public ResponseEntity<Matricula> removerMatricula(@PathVariable("id")  String id){
         if(id == ""  || id == null){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        var matricula = service.delete(id);
-        if(matricula == null){
+        var Matricula = service.delete(id);
+        if(Matricula == null){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return 
-            new ResponseEntity<matricula>
-            (matricula, HttpStatus.OK);
+            new ResponseEntity<Matricula>
+            (Matricula, HttpStatus.OK);
     }
 }

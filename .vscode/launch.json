@@ -2,11 +2,11 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Spring Boot-MicroservmatriculaApplication<microservmatricula>",
+            "name": "Spring Boot-MicroservMatriculaApplication<microservMatricula>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "mainClass": "br.edu.univille.microservmatricula.MicroservmatriculaApplication",
-            "projectName": "microservmatricula",
+            "mainClass": "br.edu.univille.microservMatricula.MicroservMatriculaApplication",
+            "projectName": "microservMatricula",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }

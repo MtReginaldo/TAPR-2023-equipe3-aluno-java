@@ -1,11 +1,11 @@
 package br.edu.univille.microservmatricula.service;
 import java.util.List;
-import br.edu.univille.microservmatricula.entity.matricula;
+import br.edu.univille.microservmatricula.entity.Matricula;
 
-public interface matriculaService {
-    public List<matricula> getAll();
-    public matricula getById(String id);
-    public matricula saveNew(matricula matricula);
-    public matricula update(String id, matricula matricula);
-    public matricula delete(String id);
+public interface MatriculaService {
+    public List<Matricula> getAll();
+    public Matricula getById(String id);
+    public Matricula saveNew(Matricula Matricula);
+    public Matricula update(String id, Matricula Matricula);
+    public Matricula delete(String id);
 }

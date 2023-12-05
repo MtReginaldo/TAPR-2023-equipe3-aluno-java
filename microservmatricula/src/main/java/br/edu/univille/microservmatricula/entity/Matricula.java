@@ -6,13 +6,13 @@ import com.azure.spring.data.cosmos.core.mapping.Container;
 import com.azure.spring.data.cosmos.core.mapping.GeneratedValue;
 import com.azure.spring.data.cosmos.core.mapping.PartitionKey;
 
-@Container(containerName = "matricula")
-public class matricula {
+@Container(containerName = "Matricula")
+public class Matricula {
     @Id
     @PartitionKey
     @GeneratedValue
     public String id;
-    public String cpf;
+    public String data;
 
     public String getId() {
         return id;
@@ -20,11 +20,11 @@ public class matricula {
     public void setId(String id) {
         this.id = id;
     }
-    public String getCpf() {
-        return cpf;
+    public String getdata() {
+        return data;
     }
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setdata(String data) {
+        this.data = data;
     }
 
 }
@@ -35,5 +35,5 @@ public class matricula {
     - curso: String
     - nome: String
     - telefone:  long
-    - cpf: String 
+    - data: String 
 */
