@@ -4,6 +4,7 @@
 - [DOC CosmosDB](https://learn.microsoft.com/en-us/azure/cosmos-db/introduction)
 - [Portal Azure](https://portal.azure.com/#home)
 
+----
 ```
 az login -u ''
 az ad signed-in-user show
@@ -14,3 +15,6 @@ git add .
 git commit -m "muita coisa"
 git push
 ```
+
+----
+![Diagrama](diagrama/matricula.jpg)
